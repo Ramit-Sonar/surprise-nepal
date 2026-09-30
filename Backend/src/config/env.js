@@ -11,7 +11,7 @@ const envSchema = z.object({
     PORT: z.coerce.number().default(8000),
 
     // Database
-    MONGO_URI: z.string().min(1, "MONGO_URI is required"),
+    MONGODB_URI: z.string().min(1, "MONGO_URI is required"),
 
     // CORS
     CORS_ORIGIN: z.string().min(1, "CORS_ORIGIN is required"),
@@ -47,8 +47,22 @@ const envSchema = z.object({
         .string()
         .min(1, "BREVO_API_KEY is required"),
 
-    // Redis
-    REDIS_URL: z.string().min(1, "REDIS_URL is required"),
+    EMAIL_FROM_NAME: z.string().min(1, "EMAIL_FROM_NAME is required"),
+
+    EMAIL_FROM: z
+        .string()
+        .email("EMAIL_FROM must be a valid email address"),
+
+    //UPSTASH_REDIS
+    UPSTASH_REDIS_REST_URL: z
+        .string()
+        .url("UPSTASH_REDIS_REST_URL must be a valid URL"),
+
+    UPSTASH_REDIS_REST_TOKEN: z
+        .string()
+        .min(1, "UPSTASH_REDIS_REST_TOKEN is required"),
+
+
 });
 
 const result = envSchema.safeParse(process.env);
