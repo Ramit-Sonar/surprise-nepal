@@ -4,8 +4,6 @@ import {
   Check,
   Tag,
   Clock,
-  Zap,
-  Gift,
   Truck,
   Percent,
 } from "lucide-react"

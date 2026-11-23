@@ -4,7 +4,6 @@ import { useParams, useNavigate } from "react-router-dom"
 import {
   ArrowLeft,
   MapPin,
-  Calendar,
   CreditCard,
   Package,
   User,

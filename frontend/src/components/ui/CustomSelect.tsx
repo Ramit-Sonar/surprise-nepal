@@ -39,7 +39,6 @@ export default function CustomSelect({
   error,
   hint,
   disabled = false,
-  required,
   className = "",
   id,
 }: CustomSelectProps) {

@@ -9,7 +9,6 @@ import {
   Star,
   MapPin,
   Clock,
-  Package,
   Minus,
   Plus,
   Share2,
@@ -61,15 +60,6 @@ export default function GiftDetail() {
     addReview,
     markReviewHelpful,
   } = useAppActions()
-
-  const requireAuth = (action: () => void) => {
-    if (!state.user) {
-      sessionStorageSet(SESSION_KEYS.REDIRECT_AFTER_LOGIN, `/gifts/${id}`)
-      navigate("/auth")
-      return
-    }
-    action()
-  }
 
   const [selectedImage, setSelectedImage] = useState(0)
   const [quantity, setQuantity] = useState(1)

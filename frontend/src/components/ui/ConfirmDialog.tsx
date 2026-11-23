@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { AlertTriangle, ShieldCheck, ShieldX, Trash2, X } from "lucide-react"
+import { AlertTriangle, Trash2, X } from "lucide-react"
 import Button from "./Button"
 
 export type ConfirmVariant = "danger" | "warning" | "success" | "info"
@@ -17,16 +17,15 @@ interface ConfirmDialogProps {
   onCancel: () => void
 }
 
-const VARIANT_STYLES: Record<ConfirmVariant, {
-  iconBg: string
-  iconColor: string
-  btn: string
-}> = {
+const VARIANT_STYLES: Record<
+  ConfirmVariant,
+  { iconBg: string; iconColor: string; btn: "primary" | "danger" }
+> = {
   danger: { iconBg: "bg-error/10", iconColor: "text-error", btn: "danger" },
   warning: {
     iconBg: "bg-amber-50",
     iconColor: "text-amber-500",
-    btn: "warning",
+    btn: "primary",
   },
   success: {
     iconBg: "bg-success/10",
@@ -136,7 +135,7 @@ export default function ConfirmDialog({
               {cancelLabel}
             </Button>
             <Button
-              variant={styles.btn as any}
+              variant={styles.btn}
               fullWidth
               onClick={onConfirm}
               loading={loading}

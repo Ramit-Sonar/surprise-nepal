@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Search, User, MapPin, Package, Calendar } from "lucide-react"
+import { Search, User, Package, Calendar } from "lucide-react"
 import AdminLayout from "../../admin/components/AdminLayout"
 import EmptyState from "../../../components/ui/EmptyState"
 import { getOptimizedImageUrl } from "../../../utils/image"

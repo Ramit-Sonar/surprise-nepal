@@ -92,8 +92,6 @@ export default function Checkout() {
   // Shared form state
   const [myName, setMyName] = useState(state.user?.name ?? "")
   const [myPhone, setMyPhone] = useState("")
-  const [myAddress, setMyAddress] = useState("")
-
   const [recipientName, setRecipientName] = useState("")
   const [recipientPhone, setRecipientPhone] = useState("")
 

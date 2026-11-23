@@ -17,7 +17,6 @@ import {
 } from "lucide-react"
 import AdminLayout from "../../admin/components/AdminLayout"
 import Button from "../../../components/ui/Button"
-import { Input } from "../../../components/ui/Input"
 import ConfirmDialog from "../../../components/ui/ConfirmDialog"
 import { useAppActions } from "../../../context/useApp"
 import { useCheckoutState } from "../../payments/hooks/useCheckoutState"
@@ -299,7 +298,6 @@ function CouponRow({
   onToggle: () => void
   onCopy: () => void
 }) {
-  const status = getCouponStatus(coupon)
   const usagePct =
     coupon.maxUsageLimit > 0
       ? Math.min(

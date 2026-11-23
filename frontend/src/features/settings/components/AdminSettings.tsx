@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useRef, type ReactNode } from "react"
+import { useState, useCallback, useEffect, useRef } from "react"
 import {
   loadNotifSettings,
   saveNotifSettings,

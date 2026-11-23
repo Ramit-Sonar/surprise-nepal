@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { CheckCircle, XCircle, AlertCircle, Info, X } from "lucide-react"
+import { CheckCircle, XCircle, AlertCircle, Info } from "lucide-react"
 import { useToastState } from "../../context/useApp"
 import type { Toast as ToastType } from "../../types/index"
 
