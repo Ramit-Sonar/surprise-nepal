@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'DM Serif Display', Georgia, serif;
+
+  --color-primary: #C2003C;
+  --color-primary-dark: #96002D;
+  --color-primary-light: #f5e0e6;
+  --color-primary-foreground: #FFFFFF;
+
+  /* Neumorphism base — warm soft gray */
+  --color-background: #E4E0DC;
+  --color-foreground: #1C1917;
+
+  /* Cards share the same background — neumorphism requires this */
+  --color-card: #E4E0DC;
+  --color-card-foreground: #1C1917;
+
+  --color-muted: #D8D4D0;
+  --color-muted-foreground: #6B6560;
+
+  --color-border: #CBC7C3;
+  --color-ring: #C2003C;
+
+  --color-accent: #F59E0B;
+  --color-accent-foreground: #FFFFFF;
+
+  --color-success: #059669;
+  --color-success-foreground: #FFFFFF;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+  --color-error-foreground: #FFFFFF;
+
+  --color-admin-sidebar: #1e1e1e;
+  --color-admin-sidebar-foreground: #e8e8e8;
+  --nm-admin-dark: #141414;
+  --nm-admin-light: #2a2a2a;
+
+  /* Neumorphism shadow colours */
+  --nm-light: #FFFFFF;
+  --nm-dark: #BEBAB5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Safe-area custom properties — resolved at runtime from env() */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+}
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Images scale to their container by default */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hide scrollbars by default, show on scroll */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-foreground);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+button,
+a,
+input,
+select,
+textarea {
+  transition: all 0.15s ease;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography utilities */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.3); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes cartBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes celebrationPop {
+  0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+  60% { transform: scale(1.1) rotate(2deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(60px) rotate(360deg); opacity: 0; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 32s linear infinite;
+  width: max-content;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.category-filter-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.admin-sidebar-nav {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-muted-foreground) transparent;
+}
+
+.admin-sidebar-nav::-webkit-scrollbar {
+  width: 3px;
+}
+
+.admin-sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.admin-sidebar-nav::-webkit-scrollbar-thumb {
+  background: var(--color-muted-foreground);
+  border-radius: 9999px;
+}
+
+.deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+.animate-fadeIn { animation: fadeIn 0.3s ease forwards; }
+.animate-slideUp { animation: slideUp 0.4s ease forwards; }
+.animate-slideInRight { animation: slideInRight 0.3s ease forwards; }
+.animate-scaleIn { animation: scaleIn 0.25s ease forwards; }
+.animate-heartBeat { animation: heartBeat 0.5s ease; }
+.animate-cartBounce { animation: cartBounce 0.4s ease; }
+.animate-celebrationPop { animation: celebrationPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.animate-spin { animation: spin 1s linear infinite; }
+.animate-pulse { animation: pulse 2s ease-in-out infinite; }
+
+.shimmer {
+  background: linear-gradient(90deg, var(--color-muted) 25%, var(--color-border) 50%, var(--color-muted) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 639px) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .backdrop-blur-sm,
+  .backdrop-blur-md {
+    backdrop-filter: none;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .hover\:-translate-y-0\.5:hover,
+  .hover\:-translate-y-1:hover,
+  .hover\:-translate-y-1\.5:hover,
+  .hover\:scale-105:hover,
+  .hover\:scale-110:hover {
+    transform: none;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SOFT NEUMORPHISM DESIGN SYSTEM
+   Reference: raised card bg = page bg, depth via twin shadows only
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Utility classes (explicit opt-in) ─────────────────────────────── */
+
+/* Large raised surface — major cards, panels */
+.nm-raised {
+  background: var(--color-card) !important;
+  box-shadow: 8px 8px 20px var(--nm-dark), -4px -4px 12px var(--nm-light);
+  border: none !important;
+}
+
+/* Medium raised — smaller cards, nav strips */
+.nm-raised-sm {
+  background: var(--color-card) !important;
+  box-shadow: 4px 4px 10px var(--nm-dark), -3px -3px 8px var(--nm-light);
+  border: none !important;
+}
+
+/* Inset / pressed — inputs, search wells */
+.nm-inset {
+  background: var(--color-background) !important;
+  box-shadow: inset 4px 4px 9px var(--nm-dark), inset -3px -3px 7px var(--nm-light);
+  border: none !important;
+}
+
+/* Flat low-depth — chips, dividers */
+.nm-flat {
+  background: var(--color-card) !important;
+  box-shadow: 2px 2px 6px var(--nm-dark), -2px -2px 5px var(--nm-light);
+  border: none !important;
+}
+
+/* ── Input / form controls ─────────────────────────────────────────── */
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]),
+select,
+textarea {
+  background: var(--color-background) !important;
+  border: none !important;
+  box-shadow: inset 4px 4px 9px var(--nm-dark), inset -3px -3px 7px var(--nm-light) !important;
+  color: var(--color-foreground);
+  transition: box-shadow 0.2s ease !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):focus,
+select:focus,
+textarea:focus {
+  box-shadow:
+    inset 4px 4px 9px var(--nm-dark),
+    inset -3px -3px 7px var(--nm-light),
+    0 0 0 2px var(--color-primary) !important;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-muted-foreground);
+  opacity: 0.8;
+}
+
+/* ── Card / panel surfaces ─────────────────────────────────────────── */
+
+/* Target div/section/article elements that serve as card containers */
+div.bg-card,
+section.bg-card,
+article.bg-card,
+aside.bg-card,
+div.bg-white {
+  background: var(--color-card) !important;
+  box-shadow: 8px 8px 20px var(--nm-dark), -4px -4px 12px var(--nm-light);
+  border-color: transparent !important;
+}
+
+/* Dialogs use a restrained, directional elevation instead of the bright
+   twin-shadow treatment used by page-level neumorphic cards. */
+div.dialog-surface {
+  background: var(--color-card) !important;
+  border-color: color-mix(in srgb, var(--color-border) 78%, transparent) !important;
+  box-shadow:
+    0 24px 64px color-mix(in srgb, var(--color-foreground) 24%, transparent),
+    0 6px 18px color-mix(in srgb, var(--color-foreground) 12%, transparent) !important;
+}
+
+/* Muted surface wells (tags bar, filter bar) */
+div.bg-muted,
+nav.bg-muted {
+  background: var(--color-muted) !important;
+  box-shadow: inset 3px 3px 7px var(--nm-dark), inset -2px -2px 5px var(--nm-light);
+  border-color: transparent !important;
+}
+
+/* ── Buttons ────────────────────────────────────────────────────────── */
+
+/* Neutral / secondary button */
+button.bg-card,
+button.bg-muted,
+button.bg-border {
+  background: var(--color-card) !important;
+  box-shadow: 4px 4px 9px var(--nm-dark), -3px -3px 7px var(--nm-light) !important;
+  border: none !important;
+  transition: box-shadow 0.15s ease, transform 0.1s ease !important;
+}
+button.bg-card:hover:not(:disabled),
+button.bg-muted:hover:not(:disabled) {
+  box-shadow: 5px 5px 12px var(--nm-dark), -4px -4px 9px var(--nm-light) !important;
+}
+button.bg-card:active:not(:disabled),
+button.bg-muted:active:not(:disabled) {
+  box-shadow: inset 3px 3px 7px var(--nm-dark), inset -2px -2px 5px var(--nm-light) !important;
+  transform: scale(0.98);
+}
+
+/* Primary (crimson) button */
+button.bg-primary,
+a.bg-primary {
+  box-shadow: 5px 5px 12px rgba(140,0,30,0.38), -3px -3px 8px rgba(255,255,255,0.22) !important;
+  border: none !important;
+  transition: box-shadow 0.15s ease, transform 0.1s ease, opacity 0.15s ease !important;
+}
+button.bg-primary:hover:not(:disabled),
+a.bg-primary:hover {
+  box-shadow: 6px 6px 16px rgba(140,0,30,0.45), -3px -3px 8px rgba(255,255,255,0.2) !important;
+}
+button.bg-primary:active:not(:disabled) {
+  box-shadow: inset 4px 4px 8px rgba(100,0,20,0.5), inset -2px -2px 5px rgba(255,255,255,0.1) !important;
+  transform: scale(0.98);
+}
+
+/* Success button */
+button.bg-success {
+  box-shadow: 4px 4px 10px rgba(3,90,60,0.32), -2px -2px 7px rgba(255,255,255,0.22) !important;
+  border: none !important;
+}
+button.bg-success:active:not(:disabled) {
+  box-shadow: inset 3px 3px 7px rgba(2,70,45,0.4), inset -2px -2px 5px rgba(255,255,255,0.1) !important;
+}
+
+/* Error / danger button */
+button.bg-error {
+  box-shadow: 4px 4px 10px rgba(160,20,20,0.3), -2px -2px 7px rgba(255,255,255,0.22) !important;
+  border: none !important;
+}
+button.bg-error:active:not(:disabled) {
+  box-shadow: inset 3px 3px 7px rgba(120,10,10,0.4), inset -2px -2px 5px rgba(255,255,255,0.1) !important;
+}
+
+/* Icon-only circular buttons */
+button.rounded-full {
+  box-shadow: 3px 3px 8px var(--nm-dark), -2px -2px 6px var(--nm-light) !important;
+  transition: box-shadow 0.15s ease, transform 0.1s ease !important;
+}
+button.rounded-full:active:not(:disabled) {
+  box-shadow: inset 3px 3px 6px var(--nm-dark), inset -2px -2px 5px var(--nm-light) !important;
+  transform: scale(0.95);
+}
+
+/* Link buttons (anchor styled as button) */
+a.rounded-2xl,
+a.rounded-xl,
+a.rounded-full {
+  box-shadow: 3px 3px 8px var(--nm-dark), -2px -2px 6px var(--nm-light) !important;
+}
+
+/* ── Badges / status pills ──────────────────────────────────────────── */
+
+span.rounded-full {
+  box-shadow: 2px 2px 5px var(--nm-dark), -1px -1px 4px var(--nm-light);
+}
+
+/* ── Dividers ───────────────────────────────────────────────────────── */
+
+hr,
+.divide-y > * + * {
+  border-color: rgba(180,175,170,0.35) !important;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(180,175,170,0.35);
+}
+
+/* ── Admin sidebar — dark neumorphic ─────────────────────────────────── */
+
+.admin-nav-item .admin-nav-label,
+.admin-nav-item .admin-nav-icon { transition: color 0.18s; }
+.admin-nav-item:not(.admin-nav-active):hover .admin-nav-label { color: #ffffff !important; }
+.admin-nav-item:not(.admin-nav-active):hover .admin-nav-icon  { color: #ffffff !important; }
+
+.bg-admin-sidebar {
+  background: var(--color-admin-sidebar);
+}
+
+.admin-nm-pill {
+  box-shadow: 5px 5px 14px var(--nm-admin-dark), -3px -3px 10px var(--nm-admin-light);
+}
+
+.admin-nm-icon {
+  box-shadow: 3px 3px 8px var(--nm-admin-dark), -2px -2px 6px var(--nm-admin-light);
+}
+
+/* Also suppress shadows on elements with explicit style overrides */
+[style*="box-shadow: none"] {
+  box-shadow: none !important;
+}
+
+/* ── Elements that must NEVER get shadows ───────────────────────────── */
+
+img,
+svg,
+video,
+canvas,
+picture,
+td, th, li,
+label,
+p, span:not(.rounded-full),
+h1, h2, h3, h4, h5, h6,
+div.bg-primary-light,
+div.bg-success\/10,
+div.bg-error\/10,
+div.bg-amber-50,
+div.bg-purple-50,
+div.bg-muted\/30,
+div.bg-muted\/40,
+div.bg-muted\/50,
+div.bg-muted\/60,
+div.bg-foreground\/80,
+div.bg-black\/60 {
+  box-shadow: none !important;
+}
+
+.shimmer {
+  box-shadow: none !important;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar-thumb {
+  background: var(--nm-dark);
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+/* ── Focus ring ─────────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  box-shadow: none !important;
+}
