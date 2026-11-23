@@ -50,6 +50,7 @@ export default defineConfig(({ command, mode }) => {
         : undefined,
       watch: {
         ignored: ["**/.figma/**"],
+        usePolling: process.env.CHOKIDAR_USEPOLLING === "true",
       },
     },
     preview: {
