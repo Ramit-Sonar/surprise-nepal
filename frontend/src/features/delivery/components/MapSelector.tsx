@@ -119,7 +119,7 @@ function ManualLocationSelector({ city, value, onChange }: MapSelectorProps) {
   return (
     <div className="space-y-4 w-full">
       <div className="flex items-start gap-3 rounded-2xl border border-border bg-muted/40 p-4">
-        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-card text-primary shadow-sm">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-card text-primary shadow-sm">
           <MapPin size={18} aria-hidden="true" />
         </div>
         <div>
@@ -626,7 +626,7 @@ function MapSelectorContent({ city, value, onChange }: MapSelectorProps) {
                   i > 0 ? "border-t border-border" : ""
                 }`}
               >
-                <MapPin size={16} className="text-primary flex-shrink-0" />
+                <MapPin size={16} className="text-primary shrink-0" />
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-semibold text-foreground truncate">
                     {s.text}
@@ -746,12 +746,12 @@ function MapSelectorContent({ city, value, onChange }: MapSelectorProps) {
             {confirmed ? (
               <CheckCircle2
                 size={18}
-                className="text-success flex-shrink-0 mt-0.5"
+                className="text-success shrink-0 mt-0.5"
               />
             ) : (
               <Navigation
                 size={18}
-                className="text-primary flex-shrink-0 mt-0.5"
+                className="text-primary shrink-0 mt-0.5"
               />
             )}
             <div className="flex-1 min-w-0">

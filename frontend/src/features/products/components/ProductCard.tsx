@@ -175,7 +175,7 @@ export default function ProductCard({
             onClick={handleAddToCart}
             disabled={!gift.inStock}
             className={`
-              flex items-center justify-center gap-1 px-3 py-2 min-h-11 sm:min-h-0 rounded-xl text-xs font-semibold transition-transform duration-150 flex-shrink-0
+              flex items-center justify-center gap-1 px-3 py-2 min-h-11 sm:min-h-0 rounded-xl text-xs font-semibold transition-transform duration-150 shrink-0
               ${
                 gift.inStock
                   ? "bg-primary text-white hover:bg-primary-dark active:scale-95"

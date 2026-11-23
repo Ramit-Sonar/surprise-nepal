@@ -94,7 +94,7 @@ export default function AdminRegister() {
           <div className="flex items-start gap-2.5 bg-yellow-500/10 border border-yellow-500/20 rounded-xl px-3 py-2.5 mb-5">
             <AlertTriangle
               size={14}
-              className="text-yellow-400 mt-0.5 flex-shrink-0"
+              className="text-yellow-400 mt-0.5 shrink-0"
             />
             <p className="text-xs text-yellow-200/80 leading-relaxed">
               Admin registration requires a valid invite code issued by an

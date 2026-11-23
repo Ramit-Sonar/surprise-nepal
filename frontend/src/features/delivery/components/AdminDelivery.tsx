@@ -408,7 +408,7 @@ export default function AdminDelivery() {
               {LEGEND.map(({ key, label, color }) => (
                 <div key={key} className="flex items-center gap-2">
                   <div
-                    className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                    className="w-2.5 h-2.5 rounded-full shrink-0"
                     style={{ background: color }}
                   />
                   <span className="text-muted-foreground">{label}</span>
@@ -482,7 +482,7 @@ export default function AdminDelivery() {
                   <div className="flex items-start justify-between gap-2 mb-1.5">
                     <div className="flex items-center gap-2 min-w-0">
                       <div
-                        className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                        className="w-2.5 h-2.5 rounded-full shrink-0"
                         style={{
                           background:
                             ORDER_STATUS_COLOR[order.status] ?? "#78716C",

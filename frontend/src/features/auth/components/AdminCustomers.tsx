@@ -151,7 +151,7 @@ export default function AdminCustomers() {
               >
                 <td className="px-4 py-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full overflow-hidden bg-primary/10 flex-shrink-0">
+                    <div className="w-9 h-9 rounded-full overflow-hidden bg-primary/10 shrink-0">
                       {customer.avatar ? (
                         <img
                           src={getOptimizedImageUrl(customer.avatar, 72)}
@@ -226,7 +226,7 @@ export default function AdminCustomers() {
             className="bg-card rounded-2xl border border-border p-4"
           >
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-11 h-11 rounded-full overflow-hidden bg-primary/10 flex-shrink-0">
+              <div className="w-11 h-11 rounded-full overflow-hidden bg-primary/10 shrink-0">
                 {customer.avatar ? (
                   <img
                     src={getOptimizedImageUrl(customer.avatar, 88)}

@@ -75,7 +75,7 @@ export default function Navbar() {
               <img
                 src={logo}
                 alt="GiftSurprise"
-                className="w-9 h-9 object-contain flex-shrink-0 group-hover:scale-105 transition-transform"
+                className="w-9 h-9 object-contain shrink-0 group-hover:scale-105 transition-transform"
               />
               <span
                 className="font-bold text-foreground text-base sm:text-lg leading-none"
@@ -144,7 +144,7 @@ export default function Navbar() {
               >
                 <ShoppingCart size={20} />
                 {cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-primary text-white text-[10px] font-bold min-w-[18px] h-[18px] rounded-full flex items-center justify-center leading-none px-0.5 shadow-sm shadow-primary/40 animate-cartBounce">
+                  <span className="absolute -top-1 -right-1 bg-primary text-white text-2xs font-bold min-w-4.5 h-4.5 rounded-full flex items-center justify-center leading-none px-0.5 shadow-sm shadow-primary/40 animate-cartBounce">
                     {cartCount > 99 ? "99+" : cartCount}
                   </span>
                 )}

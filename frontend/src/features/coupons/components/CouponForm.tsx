@@ -109,7 +109,7 @@ function MiniCalendar({
           background: "var(--color-card)",
         }}
       >
-        <Calendar size={15} className="text-primary flex-shrink-0" />
+        <Calendar size={15} className="text-primary shrink-0" />
         <span
           className={
             displayValue
@@ -156,7 +156,7 @@ function MiniCalendar({
             {dayLabels.map((d) => (
               <div
                 key={d}
-                className="text-center text-[10px] font-medium text-muted-foreground py-0.5"
+                className="text-center text-2xs font-medium text-muted-foreground py-0.5"
               >
                 {d}
               </div>
@@ -409,7 +409,7 @@ export default function CouponForm() {
                   ) : (
                     <span />
                   )}
-                  <span className="text-[10px] text-muted-foreground">
+                  <span className="text-2xs text-muted-foreground">
                     {form.description.length}/80
                   </span>
                 </div>
@@ -437,7 +437,7 @@ export default function CouponForm() {
                   <button
                     type="button"
                     onClick={() => setField("code", generateCode())}
-                    className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-foreground transition-all active:scale-95 flex-shrink-0"
+                    className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-foreground transition-all active:scale-95 shrink-0"
                     style={{
                       boxShadow:
                         "4px 4px 10px var(--nm-dark), -3px -3px 8px rgba(255,255,255,0.35)",

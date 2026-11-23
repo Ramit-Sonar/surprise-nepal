@@ -60,7 +60,7 @@ export default function PaymentCouponSummary({
       <div className="p-4 sm:p-5 space-y-4">
         {applied ? (
           <div className="flex items-center gap-3 rounded-xl bg-success/10 border border-success/20 p-3">
-            <CheckCircle2 size={18} className="text-success flex-shrink-0" />
+            <CheckCircle2 size={18} className="text-success shrink-0" />
             <div className="flex-1 min-w-0">
               <p className="text-sm font-semibold text-foreground">
                 <span className="font-mono">{applied.coupon.code}</span> applied
@@ -76,7 +76,7 @@ export default function PaymentCouponSummary({
         ) : (
           <form onSubmit={handleApply} className="space-y-3" noValidate>
             <div className="flex items-start gap-3">
-              <span className="w-9 h-9 rounded-xl nm-flat flex items-center justify-center flex-shrink-0">
+              <span className="w-9 h-9 rounded-xl nm-flat flex items-center justify-center shrink-0">
                 <TicketPercent size={17} className="text-primary" />
               </span>
               <div>
@@ -121,7 +121,7 @@ export default function PaymentCouponSummary({
             role="alert"
             className="flex items-start gap-2 text-xs text-error"
           >
-            <XCircle size={14} className="flex-shrink-0 mt-0.5" />
+            <XCircle size={14} className="shrink-0 mt-0.5" />
             <span>{couponError}</span>
           </div>
         )}

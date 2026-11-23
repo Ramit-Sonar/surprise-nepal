@@ -32,7 +32,7 @@ export default function CategoryCard({
         loading="lazy"
         decoding="async"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-foreground/80 via-foreground/20 to-transparent" />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-2">
         <span className="text-2xl mb-1" role="img" aria-label={category.name}>
           {category.icon}

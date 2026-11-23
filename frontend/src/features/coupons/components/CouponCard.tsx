@@ -99,14 +99,14 @@ export default function CouponCard({
       >
         {/* Left accent strip */}
         <div
-          className={`w-1 self-stretch rounded-full flex-shrink-0 ${
+          className={`w-1 self-stretch rounded-full shrink-0 ${
             isUsable ? "bg-primary" : "bg-border"
           }`}
         />
 
         {/* Icon */}
         <div
-          className={`w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 ${
+          className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${
             isUsable ? "bg-primary/10" : "bg-muted"
           }`}
         >
@@ -127,7 +127,7 @@ export default function CouponCard({
         </div>
 
         {/* Right: value + copy/apply */}
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-2 shrink-0">
           <span className="text-xs font-bold text-primary">
             {formatDiscount(coupon)}
           </span>
@@ -170,7 +170,7 @@ export default function CouponCard({
     >
       {/* Background gradient */}
       <div
-        className={`absolute inset-0 bg-gradient-to-br ${config.gradient} pointer-events-none`}
+        className={`absolute inset-0 bg-linear-to-br ${config.gradient} pointer-events-none`}
       />
 
       {/* Perforated divider decorations (left/right circles) */}
@@ -183,7 +183,7 @@ export default function CouponCard({
           <div className="flex items-start justify-between gap-3 mb-4">
             {/* Type icon */}
             <div
-              className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0"
+              className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0"
               style={{
                 background: "var(--color-background)",
                 boxShadow:
@@ -196,17 +196,17 @@ export default function CouponCard({
             {/* Status + expiry */}
             <div className="flex flex-col items-end gap-1">
               <span
-                className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${statusInfo.color}`}
+                className={`text-2xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${statusInfo.color}`}
               >
                 {statusInfo.label}
               </span>
               {isUsable && daysLeft > 0 && daysLeft <= 30 && (
-                <span className="text-[10px] text-warning flex items-center gap-1">
+                <span className="text-2xs text-warning flex items-center gap-1">
                   <Clock size={9} /> {daysLeft}d left
                 </span>
               )}
               {isUsable && daysLeft > 30 && (
-                <span className="text-[10px] text-muted-foreground">
+                <span className="text-2xs text-muted-foreground">
                   Expires {coupon.expiryDate}
                 </span>
               )}
@@ -258,14 +258,14 @@ export default function CouponCard({
                 "inset 3px 3px 7px var(--nm-dark), inset -2px -2px 5px var(--nm-light)",
             }}
           >
-            <Tag size={13} className="text-primary flex-shrink-0" />
+            <Tag size={13} className="text-primary shrink-0" />
             <span className="font-mono font-bold text-foreground tracking-wider text-sm truncate">
               {coupon.code}
             </span>
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-2 flex-shrink-0">
+          <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={handleCopy}
               className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold transition-all active:scale-95 ${

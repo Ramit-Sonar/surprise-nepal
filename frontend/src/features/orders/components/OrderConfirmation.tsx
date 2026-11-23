@@ -238,7 +238,7 @@ export default function OrderConfirmation() {
                         className="flex items-start gap-3 px-5 py-4"
                       >
                         <div
-                          className={`w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 ${bg}`}
+                          className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${bg}`}
                         >
                           <Icon size={15} className={color} />
                         </div>
@@ -250,7 +250,7 @@ export default function OrderConfirmation() {
                             {desc}
                           </p>
                         </div>
-                        <span className="text-xs font-bold text-muted-foreground/40 flex-shrink-0 mt-0.5">
+                        <span className="text-xs font-bold text-muted-foreground/40 shrink-0 mt-0.5">
                           {step}
                         </span>
                       </div>
@@ -299,7 +299,7 @@ export default function OrderConfirmation() {
                         className="flex items-start gap-3 px-5 py-4"
                       >
                         <div
-                          className={`w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 ${bg}`}
+                          className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${bg}`}
                         >
                           <Icon size={15} className={color} />
                         </div>
@@ -311,7 +311,7 @@ export default function OrderConfirmation() {
                             {desc}
                           </p>
                         </div>
-                        <span className="text-xs font-bold text-muted-foreground/40 flex-shrink-0 mt-0.5">
+                        <span className="text-xs font-bold text-muted-foreground/40 shrink-0 mt-0.5">
                           {step}
                         </span>
                       </div>

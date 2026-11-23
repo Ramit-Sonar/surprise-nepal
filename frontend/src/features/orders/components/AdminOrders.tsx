@@ -35,13 +35,13 @@ const ALL_STATUSES = [
 function GiftModePill({ mode }: { mode: "self" | "surprise" }) {
   if (mode === "surprise") {
     return (
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-purple-100 text-purple-700 whitespace-nowrap">
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-2xs font-semibold bg-purple-100 text-purple-700 whitespace-nowrap">
         <Gift size={9} /> Surprise Gift
       </span>
     )
   }
   return (
-    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-muted text-muted-foreground whitespace-nowrap">
+    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-2xs font-semibold bg-muted text-muted-foreground whitespace-nowrap">
       <User size={9} /> Self
     </span>
   )
@@ -56,34 +56,34 @@ function PaymentStatusPill({
 }) {
   if (paymentMethod === "Cash on Delivery") {
     return (
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-muted text-muted-foreground">
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-2xs font-semibold bg-muted text-muted-foreground">
         <Clock size={10} /> COD
       </span>
     )
   }
   if (!status || status === "pending" || status === "rejected") {
     return (
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-muted text-muted-foreground">
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-2xs font-semibold bg-muted text-muted-foreground">
         <Clock size={10} /> Pending
       </span>
     )
   }
   if (status === "screenshot_submitted") {
     return (
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-100 text-amber-700">
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-2xs font-semibold bg-amber-100 text-amber-700">
         <Upload size={10} /> Screenshot Submitted
       </span>
     )
   }
   if (status === "verified") {
     return (
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-success/10 text-success">
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-2xs font-semibold bg-success/10 text-success">
         <ShieldCheck size={10} /> Verified
       </span>
     )
   }
   return (
-    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-muted text-muted-foreground">
+    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-2xs font-semibold bg-muted text-muted-foreground">
       <Clock size={10} /> Pending
     </span>
   )

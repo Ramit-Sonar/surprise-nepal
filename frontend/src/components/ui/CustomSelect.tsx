@@ -106,7 +106,7 @@ export default function CustomSelect({
           </span>
           <ChevronDown
             size={16}
-            className={`flex-shrink-0 text-muted-foreground transition-transform duration-200 ${
+            className={`shrink-0 text-muted-foreground transition-transform duration-200 ${
               open ? "rotate-180" : ""
             }`}
           />
@@ -143,7 +143,7 @@ export default function CustomSelect({
                   `}
                 >
                   {opt.icon && (
-                    <span className="flex-shrink-0 text-primary">
+                    <span className="shrink-0 text-primary">
                       {opt.icon}
                     </span>
                   )}
@@ -164,7 +164,7 @@ export default function CustomSelect({
                     )}
                   </div>
                   {isActive && (
-                    <Check size={14} className="text-primary flex-shrink-0" />
+                    <Check size={14} className="text-primary shrink-0" />
                   )}
                 </button>
               )

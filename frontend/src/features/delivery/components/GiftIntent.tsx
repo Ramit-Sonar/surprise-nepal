@@ -120,7 +120,7 @@ export default function GiftIntent() {
                     className="flex items-center gap-2.5 text-xs text-muted-foreground"
                   >
                     <span
-                      className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
+                      className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
                       style={{
                         background: "var(--color-background)",
                         boxShadow:
@@ -167,7 +167,7 @@ export default function GiftIntent() {
             >
               {/* Popular badge */}
               <span
-                className="absolute top-5 right-5 text-[10px] font-bold uppercase tracking-widest text-primary px-2.5 py-1 rounded-full"
+                className="absolute top-5 right-5 text-2xs font-bold uppercase tracking-widest text-primary px-2.5 py-1 rounded-full"
                 style={{
                   background: "var(--color-background)",
                   boxShadow:
@@ -213,7 +213,7 @@ export default function GiftIntent() {
                     className="flex items-center gap-2.5 text-xs text-muted-foreground"
                   >
                     <span
-                      className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
+                      className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
                       style={{
                         background: "var(--color-background)",
                         boxShadow:

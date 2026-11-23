@@ -54,7 +54,7 @@ function StatCard({
     <div className="bg-card rounded-2xl border border-border p-3 sm:p-5">
       <div className="flex items-start justify-between mb-3">
         <div
-          className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+          className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center shrink-0"
           style={{ background: color + "15" }}
         >
           <Icon size={18} style={{ color }} />
@@ -397,7 +397,7 @@ export default function AdminDashboard() {
                   <MapPin size={11} />
                   {pickup.address}
                 </p>
-                <p className="text-[10px] text-muted-foreground mt-1">
+                <p className="text-2xs text-muted-foreground mt-1">
                   {pickup.orderId}
                 </p>
               </Link>
@@ -432,7 +432,7 @@ export default function AdminDashboard() {
                   alt=""
                   width={36}
                   height={36}
-                  className="w-9 h-9 rounded-lg object-cover bg-muted flex-shrink-0"
+                  className="w-9 h-9 rounded-lg object-cover bg-muted shrink-0"
                   loading="lazy"
                   decoding="async"
                 />

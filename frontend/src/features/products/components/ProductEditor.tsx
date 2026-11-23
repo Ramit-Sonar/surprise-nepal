@@ -228,7 +228,7 @@ export default function AddProduct() {
             }
             className={`${
               isShop ? "" : "hidden lg:flex"
-            } p-2 rounded-xl text-muted-foreground hover:text-foreground transition-all duration-150 active:scale-95 flex-shrink-0`}
+            } p-2 rounded-xl text-muted-foreground hover:text-foreground transition-all duration-150 active:scale-95 shrink-0`}
             style={{
               boxShadow:
                 "4px 4px 10px var(--nm-dark), -3px -3px 8px var(--nm-light)",
@@ -393,7 +393,7 @@ export default function AddProduct() {
                   alt="Primary"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-2 left-2 flex items-center gap-1 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+                <div className="absolute top-2 left-2 flex items-center gap-1 bg-primary text-white text-2xs font-bold px-2 py-0.5 rounded-full">
                   <Star size={9} className="fill-white" /> Cover
                 </div>
                 <button
@@ -442,7 +442,7 @@ export default function AddProduct() {
                 {images.slice(1).map((img, i) => (
                   <div
                     key={i}
-                    className="relative group w-16 h-16 rounded-xl overflow-hidden border-2 border-border flex-shrink-0"
+                    className="relative group w-16 h-16 rounded-xl overflow-hidden border-2 border-border shrink-0"
                   >
                     <img
                       src={img}
@@ -482,7 +482,7 @@ export default function AddProduct() {
                     setDragOver(false)
                     addImagesFromFiles(e.dataTransfer.files)
                   }}
-                  className={`w-16 h-16 rounded-xl border-2 border-dashed flex flex-col items-center justify-center gap-1 flex-shrink-0 transition-colors ${
+                  className={`w-16 h-16 rounded-xl border-2 border-dashed flex flex-col items-center justify-center gap-1 shrink-0 transition-colors ${
                     dragOver
                       ? "border-primary bg-primary/5"
                       : "border-border hover:border-primary/50"
@@ -541,7 +541,7 @@ export default function AddProduct() {
             {/* Divider */}
             <div className="flex items-center gap-2">
               <div className="flex-1 h-px bg-border" />
-              <span className="text-[10px] text-muted-foreground uppercase tracking-wider">
+              <span className="text-2xs text-muted-foreground uppercase tracking-wider">
                 or add by URL
               </span>
               <div className="flex-1 h-px bg-border" />
@@ -572,13 +572,13 @@ export default function AddProduct() {
               </div>
               <button
                 onClick={addImageFromUrl}
-                className="flex-shrink-0 px-3 py-2 bg-primary text-white rounded-xl text-xs font-semibold hover:bg-primary-dark transition-colors flex items-center gap-1"
+                className="shrink-0 px-3 py-2 bg-primary text-white rounded-xl text-xs font-semibold hover:bg-primary-dark transition-colors flex items-center gap-1"
               >
                 <Link size={12} /> Add
               </button>
             </div>
 
-            <p className="text-[10px] text-muted-foreground">
+            <p className="text-2xs text-muted-foreground">
               First image is the cover. Hover a thumbnail and click ★ to promote
               it. Supports JPG, PNG, WebP.
             </p>

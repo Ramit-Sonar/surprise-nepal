@@ -165,7 +165,7 @@ export default function Home() {
                 ["500+", "Gifts delivered"],
                 ["10", "Cities covered"],
               ].map(([n, l]) => (
-                <div key={l} className="flex-shrink-0">
+                <div key={l} className="shrink-0">
                   <p className="text-xl sm:text-2xl font-bold text-white">
                     {n}
                   </p>
@@ -189,7 +189,7 @@ export default function Home() {
                   alt={gift.name}
                   width={64}
                   height={64}
-                  className="w-16 h-16 rounded-xl object-cover flex-shrink-0"
+                  className="w-16 h-16 rounded-xl object-cover shrink-0"
                   decoding="async"
                 />
                 <div className="flex-1 min-w-0">
@@ -241,7 +241,7 @@ export default function Home() {
             size="sm"
             onClick={() => navigate("/gifts")}
             rightIcon={<ChevronRight size={16} />}
-            className="flex-shrink-0"
+            className="shrink-0"
           >
             See all
           </Button>
@@ -273,7 +273,7 @@ export default function Home() {
               size="sm"
               onClick={() => navigate("/gifts")}
               rightIcon={<ChevronRight size={16} />}
-              className="flex-shrink-0"
+              className="shrink-0"
             >
               View all
             </Button>
@@ -485,12 +485,12 @@ export default function Home() {
                       alt={t.name}
                       width={40}
                       height={40}
-                      className="w-10 h-10 rounded-full object-cover border border-border flex-shrink-0"
+                      className="w-10 h-10 rounded-full object-cover border border-border shrink-0"
                       loading="lazy"
                       decoding="async"
                     />
                   ) : (
-                    <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm border border-border flex-shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm border border-border shrink-0">
                       {t.name[0].toUpperCase()}
                     </div>
                   )}
@@ -539,7 +539,7 @@ export default function Home() {
       {/* Partner entry point */}
       <section className="deferred-section max-w-7xl mx-auto px-4 sm:px-6 pb-16">
         <div className="rounded-2xl border border-border bg-muted/40 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
-          <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+          <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
             <Store size={22} />
           </div>
           <div className="flex-1">
@@ -557,7 +557,7 @@ export default function Home() {
             variant="outline"
             onClick={() => navigate("/partner")}
             rightIcon={<ArrowRight size={16} />}
-            className="sm:flex-shrink-0"
+            className="sm:shrink-0"
           >
             Partner With Us
           </Button>

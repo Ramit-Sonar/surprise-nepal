@@ -261,7 +261,7 @@ export default function AdminProducts() {
             <button
               key={s}
               onClick={() => setStatusFilter(s)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors capitalize whitespace-nowrap flex-shrink-0 ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors capitalize whitespace-nowrap shrink-0 ${
                 statusFilter === s
                   ? "bg-card text-foreground shadow-sm"
                   : "text-muted-foreground hover:text-foreground"
@@ -325,10 +325,10 @@ export default function AdminProducts() {
                         decoding="async"
                       />
                       <div className="min-w-0">
-                        <p className="font-medium text-foreground text-sm truncate max-w-[180px]">
+                        <p className="font-medium text-foreground text-sm truncate max-w-45">
                           {gift.name}
                         </p>
-                        <p className="text-xs text-muted-foreground truncate max-w-[180px]">
+                        <p className="text-xs text-muted-foreground truncate max-w-45">
                           Shop: {gift.shopName ?? "Surprise Nepal"} ·{" "}
                           {gift.submittedAt
                             ? new Date(gift.submittedAt).toLocaleDateString()
@@ -440,7 +440,7 @@ export default function AdminProducts() {
                               ? "Disable Featured"
                               : "Enable Featured"
                           }
-                          className="!p-1.5 !min-h-0"
+                          className="p-1.5! min-h-0!"
                         >
                           <Star
                             size={15}
@@ -507,7 +507,7 @@ export default function AdminProducts() {
                                   }
                                 />
                               }
-                              className="!justify-start !rounded-none !px-4 !py-2 !min-h-0 !font-normal"
+                              className="justify-start! rounded-none! px-4! py-2! min-h-0! font-normal!"
                             >
                               {gift.featured
                                 ? "Disable Featured"
@@ -556,7 +556,7 @@ export default function AdminProducts() {
                   alt=""
                   width={56}
                   height={56}
-                  className="w-14 h-14 rounded-xl object-cover bg-muted flex-shrink-0"
+                  className="w-14 h-14 rounded-xl object-cover bg-muted shrink-0"
                   loading="lazy"
                   decoding="async"
                 />
@@ -569,7 +569,7 @@ export default function AdminProducts() {
                       <p className="text-xs text-muted-foreground capitalize">
                         {gift.category}
                       </p>
-                      <p className="text-[10px] text-muted-foreground truncate">
+                      <p className="text-2xs text-muted-foreground truncate">
                         Shop: {gift.shopName ?? "Surprise Nepal"}
                       </p>
                     </div>
@@ -638,7 +638,7 @@ export default function AdminProducts() {
                         aria-label={
                           gift.featured ? "Disable Featured" : "Enable Featured"
                         }
-                        className="!p-1.5 !min-h-0"
+                        className="p-1.5! min-h-0!"
                       >
                         <Star
                           size={14}

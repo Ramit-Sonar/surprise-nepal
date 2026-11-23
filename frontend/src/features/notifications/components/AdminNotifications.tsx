@@ -137,7 +137,7 @@ export default function AdminNotifications() {
       >
         <Bell size={24} />
         {unreadCount > 0 && (
-          <span className="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center leading-none">
+          <span className="absolute top-1 right-1 min-w-4.5 h-4.5 px-1 bg-primary text-white text-2xs font-bold rounded-full flex items-center justify-center leading-none">
             {unreadCount > 9 ? "9+" : unreadCount}
           </span>
         )}
@@ -217,12 +217,12 @@ export default function AdminNotifications() {
                   >
                     {/* Unread dot */}
                     {!isRead && (
-                      <span className="absolute left-2 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="absolute left-2 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                     )}
 
                     {/* Icon */}
                     <div
-                      className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${cfg.bg}`}
+                      className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${cfg.bg}`}
                     >
                       <Icon size={16} className={cfg.color} />
                     </div>
@@ -241,13 +241,13 @@ export default function AdminNotifications() {
                       <p className="text-xs text-muted-foreground mt-0.5 leading-snug truncate">
                         {notif.description}
                       </p>
-                      <p className="text-[10px] text-muted-foreground/70 mt-1">
+                      <p className="text-2xs text-muted-foreground/70 mt-1">
                         {relativeTime(notif.createdAt)}
                       </p>
                     </div>
 
                     {/* Actions */}
-                    <div className="flex items-center gap-1 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="flex items-center gap-1 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
                       {notif.orderId && (
                         <ChevronRight
                           size={14}

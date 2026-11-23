@@ -332,13 +332,13 @@ export default function GiftListing() {
                     } found`}
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-2 flex-shrink-0">
+            <div className="flex flex-wrap items-center gap-2 shrink-0">
               {/* Sort */}
               <CustomSelect
                 value={sort}
                 onChange={setSort}
                 options={SORT_OPTIONS}
-                className="w-[150px] sm:w-[170px]"
+                className="w-37.5 sm:w-42.5"
               />
               {/* View toggle */}
               <div className="hidden sm:flex border border-border rounded-xl overflow-hidden">
@@ -372,7 +372,7 @@ export default function GiftListing() {
       {pendingCouponData && (
         <div className="bg-success/10 border-b border-success/20 px-4 sm:px-6 py-2.5">
           <div className="max-w-7xl mx-auto flex items-center gap-2.5 text-sm">
-            <Tag size={14} className="text-success flex-shrink-0" />
+            <Tag size={14} className="text-success shrink-0" />
             <span className="text-success font-semibold">
               Offer <span className="font-mono">{pendingCouponData.code}</span>{" "}
               is ready!
@@ -398,7 +398,7 @@ export default function GiftListing() {
           {/* All button */}
           <button
             onClick={() => setSelectedCategories([])}
-            className="flex w-20 flex-col items-center gap-2 flex-shrink-0 snap-start transition-all duration-150 active:scale-95"
+            className="flex w-20 flex-col items-center gap-2 shrink-0 snap-start transition-all duration-150 active:scale-95"
           >
             <div
               className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-all ${
@@ -432,7 +432,7 @@ export default function GiftListing() {
                 key={cat.id}
                 ref={isActive ? activeCategoryRef : null}
                 onClick={() => toggleCategory(cat.id)}
-                className="flex w-20 flex-col items-center gap-2 flex-shrink-0 snap-start transition-all duration-150 active:scale-95"
+                className="flex w-20 flex-col items-center gap-2 shrink-0 snap-start transition-all duration-150 active:scale-95"
               >
                 <div
                   className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-all ${
@@ -462,7 +462,7 @@ export default function GiftListing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="flex gap-8">
           {/* Sidebar filters — desktop */}
-          <aside className="hidden lg:block w-56 flex-shrink-0">
+          <aside className="hidden lg:block w-56 shrink-0">
             <div className="bg-card rounded-2xl border border-border p-5 sticky top-24">
               <p className="font-semibold text-foreground mb-4 flex items-center justify-between">
                 Filters

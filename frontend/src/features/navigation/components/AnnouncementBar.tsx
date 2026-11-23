@@ -137,7 +137,7 @@ export default function AnnouncementBar() {
       <div className="relative hidden sm:flex items-center gap-4 max-w-7xl mx-auto px-6 py-3">
         {/* Badge */}
         <div
-          className="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 rounded-2xl"
+          className="shrink-0 flex flex-col items-center justify-center w-14 h-14 rounded-2xl"
           style={{
             background: "rgba(0,0,0,0.22)",
             border: "2px solid rgba(255,255,255,0.18)",
@@ -156,7 +156,7 @@ export default function AnnouncementBar() {
           <div className="flex items-center gap-1.5">
             <Zap
               size={13}
-              className="text-yellow-300 fill-yellow-300 flex-shrink-0"
+              className="text-yellow-300 fill-yellow-300 shrink-0"
             />
             <span className="text-white font-bold text-sm leading-tight truncate">
               {coupon.description}
@@ -186,7 +186,7 @@ export default function AnnouncementBar() {
         </div>
 
         {/* Countdown */}
-        <div className="flex items-end gap-1.5 flex-shrink-0">
+        <div className="flex items-end gap-1.5 shrink-0">
           <TimeBlock value={countdown.days} label="DAYS" />
           <Sep />
           <TimeBlock value={countdown.hours} label="HRS" />
@@ -199,7 +199,7 @@ export default function AnnouncementBar() {
         {/* CTA */}
         <button
           onClick={handleGrab}
-          className="flex-shrink-0 flex items-center gap-1.5 font-black text-sm text-primary bg-white hover:bg-white/90 px-4 py-2.5 rounded-xl transition-all active:scale-95 whitespace-nowrap"
+          className="shrink-0 flex items-center gap-1.5 font-black text-sm text-primary bg-white hover:bg-white/90 px-4 py-2.5 rounded-xl transition-all active:scale-95 whitespace-nowrap"
           style={{ boxShadow: "0 4px 14px rgba(0,0,0,0.22)" }}
         >
           GRAB NOW <ArrowRight size={13} />
@@ -208,7 +208,7 @@ export default function AnnouncementBar() {
         {/* Dismiss */}
         <button
           onClick={() => setDismissed(true)}
-          className="flex-shrink-0 p-1.5 rounded-full hover:bg-white/20 transition-colors"
+          className="shrink-0 p-1.5 rounded-full hover:bg-white/20 transition-colors"
           aria-label="Dismiss"
         >
           <X size={15} className="text-white/70" />
@@ -230,14 +230,14 @@ export default function AnnouncementBar() {
         <div className="flex items-center gap-2 pr-6">
           <Zap
             size={12}
-            className="text-yellow-300 fill-yellow-300 flex-shrink-0"
+            className="text-yellow-300 fill-yellow-300 shrink-0"
           />
           <p className="text-white font-bold text-xs leading-tight flex-1 min-w-0 truncate">
             {coupon.description}
           </p>
           {/* Tiny inline countdown — no boxes, just numbers */}
           <span
-            className="flex-shrink-0 flex items-center gap-0.5 font-black tabular-nums"
+            className="shrink-0 flex items-center gap-0.5 font-black tabular-nums"
             style={{ fontSize: "10px" }}
           >
             <span className="bg-black/25 rounded px-1 py-0.5 text-white font-black">
@@ -264,7 +264,7 @@ export default function AnnouncementBar() {
           {/* Code pill */}
           <button
             onClick={handleCopy}
-            className="inline-flex items-center gap-1 font-mono font-black text-xs text-white px-2 py-1 rounded-lg flex-shrink-0 transition-all active:scale-95"
+            className="inline-flex items-center gap-1 font-mono font-black text-xs text-white px-2 py-1 rounded-lg shrink-0 transition-all active:scale-95"
             style={{
               background: "rgba(255,255,255,0.15)",
               border: "1.5px dashed rgba(255,255,255,0.45)",
@@ -279,7 +279,7 @@ export default function AnnouncementBar() {
           </button>
 
           {/* Discount value */}
-          <span className="text-yellow-300 font-black text-sm flex-shrink-0">
+          <span className="text-yellow-300 font-black text-sm shrink-0">
             {formatDiscount(coupon)}
           </span>
         </div>

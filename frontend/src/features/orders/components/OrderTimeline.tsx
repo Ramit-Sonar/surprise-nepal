@@ -173,7 +173,7 @@ export default function OrderTimeline({
 
             {/* Icon */}
             <div
-              className={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+              className={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
                 isCompleted
                   ? "bg-success text-white"
                   : isCurrent

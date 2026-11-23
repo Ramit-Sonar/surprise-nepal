@@ -113,7 +113,7 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background lg:flex lg:h-screen lg:overflow-hidden">
       <aside
-        className="hidden lg:flex flex-col flex-shrink-0"
+        className="hidden lg:flex flex-col shrink-0"
         style={{ width: 272, background: SIDEBAR.background }}
       >
         <div className="flex flex-col h-full" style={{ padding: "16px 14px" }}>
@@ -130,7 +130,7 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
             }}
           >
             <div
-              className="flex items-center justify-center flex-shrink-0"
+              className="flex items-center justify-center shrink-0"
               style={{
                 width: 44,
                 height: 44,
@@ -142,14 +142,14 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
               <img
                 src={logo}
                 alt="Surprise Nepal"
-                className="w-[30px] h-[30px] object-contain"
+                className="w-7.5 h-7.5 object-contain"
               />
             </div>
             <div className="min-w-0">
               <p className="font-display font-bold text-white text-lg leading-tight truncate">
                 Surprise Nepal
               </p>
-              <p className="text-[10px] text-[#6b6b6b] uppercase tracking-[0.12em] mt-0.5">
+              <p className="text-2xs text-[#6b6b6b] uppercase tracking-[0.12em] mt-0.5">
                 Shop Portal
               </p>
             </div>
@@ -178,7 +178,7 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
                   }}
                 >
                   <div
-                    className="relative flex items-center justify-center flex-shrink-0"
+                    className="relative flex items-center justify-center shrink-0"
                     style={{
                       width: 38,
                       height: 38,
@@ -197,7 +197,7 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
                       }}
                     />
                     {item.to === "/shop/orders" && newOrderCount > 0 && (
-                      <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center leading-none shadow-sm">
+                      <span className="absolute -top-1 -right-1 min-w-4.5 h-4.5 px-1 bg-primary text-white text-2xs font-bold rounded-full flex items-center justify-center leading-none shadow-sm">
                         {newOrderCount > 9 ? "9+" : newOrderCount}
                       </span>
                     )}
@@ -220,7 +220,7 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
           </nav>
 
           <div
-            className="flex-shrink-0"
+            className="shrink-0"
             style={{
               background: SIDEBAR.background,
               boxShadow: raisedShadow,
@@ -231,7 +231,7 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
           >
             <div className="flex items-center gap-2.5 mb-2.5">
               <div
-                className="flex items-center justify-center flex-shrink-0 overflow-hidden"
+                className="flex items-center justify-center shrink-0 overflow-hidden"
                 style={{
                   width: 44,
                   height: 44,
@@ -289,7 +289,7 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
           <div className="flex items-center gap-2.5 min-w-0">
             <Link
               to="/shop"
-              className="flex-shrink-0 group"
+              className="shrink-0 group"
               aria-label="Shop dashboard"
             >
               <img
@@ -302,7 +302,7 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
               <p className="font-bold text-sm sm:text-base text-foreground truncate leading-tight font-display">
                 {shop?.name ?? "Shop Portal"}
               </p>
-              <p className="text-[10px] sm:text-xs text-muted-foreground leading-tight mt-0.5">
+              <p className="text-2xs sm:text-xs text-muted-foreground leading-tight mt-0.5">
                 Partner Shop
               </p>
             </div>
@@ -331,7 +331,7 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
           >
             <Bell size={20} />
             {unreadCount > 0 && (
-              <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center leading-none shadow-sm shadow-primary/30">
+              <span className="absolute -top-1 -right-1 min-w-4.5 h-4.5 px-1 bg-primary text-white text-2xs font-bold rounded-full flex items-center justify-center leading-none shadow-sm shadow-primary/30">
                 {unreadCount > 9 ? "9+" : unreadCount}
               </span>
             )}
@@ -354,7 +354,7 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
           paddingBottom: "var(--sab)",
         }}
       >
-        <div className="h-[62px] flex items-center justify-around px-2 gap-1">
+        <div className="h-15.5 flex items-center justify-around px-2 gap-1">
           {MOBILE_NAV_ITEMS.map((item) => {
             const Icon = item.icon
             const active =
@@ -369,7 +369,7 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
                 className="flex-1 min-w-0 flex justify-center no-underline"
               >
                 <div
-                  className="w-full max-w-[58px] h-[50px] rounded-[18px] flex flex-col items-center justify-center gap-[3px] bg-card transition-all duration-200"
+                  className="w-full max-w-14.5 h-12.5 rounded-[18px] flex flex-col items-center justify-center gap-0.75 bg-card transition-all duration-200"
                   style={{
                     boxShadow: active
                       ? "inset 3px 3px 7px var(--nm-dark), inset -2px -2px 5px var(--nm-light)"
@@ -385,13 +385,13 @@ export default function ShopLayout({ children }: { children: ReactNode }) {
                       }
                     />
                     {item.to === "/shop/orders" && newOrderCount > 0 && (
-                      <span className="absolute -top-2 -right-3 min-w-[16px] h-4 px-1 bg-primary text-white text-[9px] font-bold rounded-full flex items-center justify-center leading-none shadow-sm shadow-primary/30">
+                      <span className="absolute -top-2 -right-3 min-w-4 h-4 px-1 bg-primary text-white text-[9px] font-bold rounded-full flex items-center justify-center leading-none shadow-sm shadow-primary/30">
                         {newOrderCount > 9 ? "9+" : newOrderCount}
                       </span>
                     )}
                   </span>
                   <span
-                    className={`truncate max-w-full px-1 text-[10px] leading-none ${
+                    className={`truncate max-w-full px-1 text-2xs leading-none ${
                       active
                         ? "text-primary font-bold"
                         : "text-muted-foreground font-medium"

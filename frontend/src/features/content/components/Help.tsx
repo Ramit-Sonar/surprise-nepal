@@ -54,7 +54,7 @@ export default function Help() {
       <div className="md:hidden flex items-center gap-2 px-4 py-3 border-b border-border">
         <button
           onClick={() => navigate(-1)}
-          className="w-9 h-9 flex items-center justify-center rounded-xl text-muted-foreground active:scale-95 transition-transform flex-shrink-0"
+          className="w-9 h-9 flex items-center justify-center rounded-xl text-muted-foreground active:scale-95 transition-transform shrink-0"
           style={{
             boxShadow:
               "4px 4px 10px var(--nm-dark), -3px -3px 8px var(--nm-light)",
@@ -134,12 +134,12 @@ export default function Help() {
                 {openId === faq.id ? (
                   <ChevronUp
                     size={18}
-                    className="text-primary flex-shrink-0 mt-0.5"
+                    className="text-primary shrink-0 mt-0.5"
                   />
                 ) : (
                   <ChevronDown
                     size={18}
-                    className="text-muted-foreground flex-shrink-0 mt-0.5"
+                    className="text-muted-foreground shrink-0 mt-0.5"
                   />
                 )}
               </button>
@@ -197,7 +197,7 @@ export default function Help() {
             <div className="bg-primary-light border border-primary/20 rounded-2xl p-4 mb-6 flex items-start gap-3">
               <ReceiptText
                 size={18}
-                className="text-primary flex-shrink-0 mt-0.5"
+                className="text-primary shrink-0 mt-0.5"
               />
               <div>
                 <p className="font-semibold text-foreground">
@@ -264,7 +264,7 @@ export default function Help() {
                 "Customer name and contact number used on the order",
               ].map((item, index) => (
                 <div key={item} className="flex items-start gap-2">
-                  <span className="w-5 h-5 rounded-full bg-primary-light text-primary flex items-center justify-center text-xs font-bold flex-shrink-0">
+                  <span className="w-5 h-5 rounded-full bg-primary-light text-primary flex items-center justify-center text-xs font-bold shrink-0">
                     {index + 1}
                   </span>
                   <span>{item}</span>

@@ -34,7 +34,7 @@ export default function OrderSupportNotice({ order }: { order: Order }) {
   return (
     <div className="bg-warning/10 border border-warning/20 rounded-2xl p-5">
       <div className="flex items-start gap-3">
-        <div className="w-10 h-10 rounded-xl bg-warning/15 flex items-center justify-center flex-shrink-0">
+        <div className="w-10 h-10 rounded-xl bg-warning/15 flex items-center justify-center shrink-0">
           <ShieldAlert size={19} className="text-warning" />
         </div>
         <div className="flex-1 min-w-0">
@@ -47,7 +47,7 @@ export default function OrderSupportNotice({ order }: { order: Order }) {
           <div className="flex items-start gap-2 mt-3 text-xs text-muted-foreground">
             <ReceiptText
               size={14}
-              className="text-warning flex-shrink-0 mt-0.5"
+              className="text-warning shrink-0 mt-0.5"
             />
             <p>
               When contacting support, include{" "}

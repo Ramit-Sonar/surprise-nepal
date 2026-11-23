@@ -212,7 +212,7 @@ export default function GiftDetail() {
         <div className="flex items-center gap-2 mb-6 min-w-0">
           <button
             onClick={() => navigate(-1)}
-            className="md:hidden flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-xl text-muted-foreground active:scale-95 transition-transform"
+            className="md:hidden shrink-0 w-9 h-9 flex items-center justify-center rounded-xl text-muted-foreground active:scale-95 transition-transform"
             style={{
               boxShadow:
                 "4px 4px 10px var(--nm-dark), -3px -3px 8px var(--nm-light)",
@@ -222,21 +222,21 @@ export default function GiftDetail() {
             <ChevronLeft size={20} />
           </button>
           <nav className="flex items-center gap-1.5 text-xs text-muted-foreground overflow-x-auto whitespace-nowrap pb-0.5 min-w-0">
-            <Link to="/" className="hover:text-foreground flex-shrink-0">
+            <Link to="/" className="hover:text-foreground shrink-0">
               Home
             </Link>
-            <ChevronRight size={12} className="flex-shrink-0" />
-            <Link to="/gifts" className="hover:text-foreground flex-shrink-0">
+            <ChevronRight size={12} className="shrink-0" />
+            <Link to="/gifts" className="hover:text-foreground shrink-0">
               Gifts
             </Link>
-            <ChevronRight size={12} className="flex-shrink-0" />
+            <ChevronRight size={12} className="shrink-0" />
             <Link
               to={`/gifts?category=${gift.category}`}
-              className="hover:text-foreground capitalize flex-shrink-0"
+              className="hover:text-foreground capitalize shrink-0"
             >
               {gift.category}
             </Link>
-            <ChevronRight size={12} className="flex-shrink-0" />
+            <ChevronRight size={12} className="shrink-0" />
             <span className="text-foreground font-medium truncate min-w-0">
               {gift.name}
             </span>
@@ -269,7 +269,7 @@ export default function GiftDetail() {
                   <button
                     key={i}
                     onClick={() => setSelectedImage(i)}
-                    className={`w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-xl overflow-hidden border-2 transition-all ${
+                    className={`w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-xl overflow-hidden border-2 transition-all ${
                       i === selectedImage
                         ? "border-primary shadow-md"
                         : "border-border hover:border-primary/50"
@@ -361,7 +361,7 @@ export default function GiftDetail() {
 
             {/* Delivery info */}
             <div className="flex items-start gap-3 p-4 bg-muted rounded-xl mb-6">
-              <Clock size={18} className="text-primary mt-0.5 flex-shrink-0" />
+              <Clock size={18} className="text-primary mt-0.5 shrink-0" />
               <div>
                 <p className="text-sm font-semibold text-foreground">
                   {deliveryService.estimatedDeliveryTime}
@@ -376,7 +376,7 @@ export default function GiftDetail() {
             <div className="flex items-start gap-2 mb-6">
               <MapPin
                 size={15}
-                className="text-muted-foreground mt-0.5 flex-shrink-0"
+                className="text-muted-foreground mt-0.5 shrink-0"
               />
               <p className="text-sm text-muted-foreground">
                 <span className="font-medium text-foreground">
@@ -407,7 +407,7 @@ export default function GiftDetail() {
                     <Minus size={15} />
                   </button>
                   <span
-                    className="px-4 py-3 font-bold text-foreground min-w-[2.5rem] text-center text-sm"
+                    className="px-4 py-3 font-bold text-foreground min-w-10 text-center text-sm"
                     style={{
                       boxShadow:
                         "inset 3px 3px 6px var(--nm-dark), inset -2px -2px 5px var(--nm-light)",
@@ -495,7 +495,7 @@ export default function GiftDetail() {
         </div>
 
         {/* SURPRISE SECTION */}
-        <div className="mt-16 bg-gradient-to-br from-primary/5 via-primary-light to-primary/10 border-2 border-primary/20 rounded-3xl p-5 sm:p-8 lg:p-10">
+        <div className="mt-16 bg-linear-to-br from-primary/5 via-primary-light to-primary/10 border-2 border-primary/20 rounded-3xl p-5 sm:p-8 lg:p-10">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
@@ -598,7 +598,7 @@ export default function GiftDetail() {
                   <li key={i} className="flex items-start gap-3">
                     <Check
                       size={16}
-                      className="text-success flex-shrink-0 mt-0.5"
+                      className="text-success shrink-0 mt-0.5"
                     />
                     <span className="text-foreground text-sm">{item}</span>
                   </li>
@@ -648,7 +648,7 @@ export default function GiftDetail() {
                 {reviews.length > 0 && (
                   <div className="flex flex-col sm:flex-row gap-6 p-5 bg-muted rounded-2xl">
                     {/* Big score */}
-                    <div className="flex flex-col items-center justify-center sm:min-w-[100px]">
+                    <div className="flex flex-col items-center justify-center sm:min-w-25">
                       <span className="text-5xl font-bold text-foreground">
                         {avgRating.toFixed(1)}
                       </span>
@@ -681,7 +681,7 @@ export default function GiftDetail() {
                           </span>
                           <Star
                             size={11}
-                            className="text-accent fill-accent flex-shrink-0"
+                            className="text-accent fill-accent shrink-0"
                           />
                           <div className="flex-1 h-2 bg-border rounded-full overflow-hidden">
                             <div
@@ -814,7 +814,7 @@ export default function GiftDetail() {
                       Your Review
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="w-9 h-9 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-sm flex-shrink-0">
+                      <div className="w-9 h-9 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-sm shrink-0">
                         {userReview.userName[0].toUpperCase()}
                       </div>
                       <div className="flex-1">
@@ -865,12 +865,12 @@ export default function GiftDetail() {
                                 alt={r.userName}
                                 width={36}
                                 height={36}
-                                className="w-9 h-9 rounded-full object-cover flex-shrink-0"
+                                className="w-9 h-9 rounded-full object-cover shrink-0"
                                 loading="lazy"
                                 decoding="async"
                               />
                             ) : (
-                              <div className="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm flex-shrink-0">
+                              <div className="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm shrink-0">
                                 {r.userName[0].toUpperCase()}
                               </div>
                             )}

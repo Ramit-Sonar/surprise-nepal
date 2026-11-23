@@ -29,7 +29,7 @@ export default function Partner() {
               >
                 <CheckCircle2
                   size={16}
-                  className="text-success mt-0.5 flex-shrink-0"
+                  className="text-success mt-0.5 shrink-0"
                 />
                 <span className="text-sm text-foreground">{item}</span>
               </div>

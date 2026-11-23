@@ -156,7 +156,7 @@ function AdminAccessTab() {
                     })}
                   </p>
                 </div>
-                <div className="flex items-center gap-2 flex-shrink-0">
+                <div className="flex items-center gap-2 shrink-0">
                   <button
                     onClick={() => handleCopy(c.code)}
                     className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium bg-card border border-border hover:border-primary/40 hover:text-primary transition-colors"
@@ -283,7 +283,7 @@ function PaymentTab() {
       {/* Header info */}
       <div className="bg-card rounded-2xl border border-border p-6">
         <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
             <QrCode size={20} className="text-primary" />
           </div>
           <div>
@@ -319,7 +319,7 @@ function PaymentTab() {
 
           {/* QR Preview frame */}
           <div className="flex justify-center mb-6">
-            <div className="relative bg-white rounded-3xl p-6 shadow-xl shadow-foreground/10 border border-border max-w-[280px] w-full">
+            <div className="relative bg-white rounded-3xl p-6 shadow-xl shadow-foreground/10 border border-border max-w-70 w-full">
               <p className="text-center text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">
                 Payment QR
               </p>
@@ -421,7 +421,7 @@ function PaymentTab() {
 
           {/* Warning banner */}
           <div className="mt-4 flex items-start gap-3 p-4 bg-amber-50 border border-amber-200 rounded-xl">
-            <span className="text-amber-500 mt-0.5 flex-shrink-0">⚠</span>
+            <span className="text-amber-500 mt-0.5 shrink-0">⚠</span>
             <p className="text-xs text-amber-800 leading-relaxed">
               <span className="font-semibold">No active QR.</span> Customers
               cannot complete checkout until a payment QR is uploaded here.
@@ -455,7 +455,7 @@ function PaymentTab() {
             },
           ].map((item) => (
             <li key={item.step} className="flex items-start gap-3">
-              <span className="w-6 h-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span className="w-6 h-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                 {item.step}
               </span>
               <p className="text-sm text-muted-foreground">{item.text}</p>
@@ -569,14 +569,14 @@ function NotificationsTab() {
                   {item.description}
                 </p>
               </div>
-              <label className="relative inline-flex items-center cursor-pointer flex-shrink-0">
+              <label className="relative inline-flex items-center cursor-pointer shrink-0">
                 <input
                   type="checkbox"
                   checked={settings[item.key]}
                   onChange={() => toggle(item.key)}
                   className="sr-only peer"
                 />
-                <div className="w-10 h-5 bg-border rounded-full peer peer-checked:after:translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary" />
+                <div className="w-10 h-5 bg-border rounded-full peer peer-checked:after:translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary" />
               </label>
             </div>
           ))}
@@ -586,7 +586,7 @@ function NotificationsTab() {
       <div className="bg-muted/50 rounded-2xl border border-border p-4 flex items-start gap-3">
         <Bell
           size={16}
-          className="text-muted-foreground flex-shrink-0 mt-0.5"
+          className="text-muted-foreground shrink-0 mt-0.5"
         />
         <p className="text-xs text-muted-foreground leading-relaxed">
           Notifications appear in the bell icon at the top of the admin panel.
@@ -883,7 +883,7 @@ export default function AdminSettings() {
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" className="sr-only peer" />
-                  <div className="w-10 h-5 bg-border rounded-full peer peer-checked:after:translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary" />
+                  <div className="w-10 h-5 bg-border rounded-full peer peer-checked:after:translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary" />
                 </label>
               </div>
             </div>

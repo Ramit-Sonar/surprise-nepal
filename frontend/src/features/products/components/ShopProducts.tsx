@@ -126,7 +126,7 @@ export default function ShopProducts() {
               : `${visibleProducts.length} of ${products.length} products`}
           </p>
         </div>
-        <Link to="/shop/products/new" className="flex-shrink-0">
+        <Link to="/shop/products/new" className="shrink-0">
           <Button size="sm" leftIcon={<Plus size={16} />}>
             Add Gift
           </Button>
@@ -173,7 +173,7 @@ export default function ShopProducts() {
               }}
             >
               <div className="flex gap-3 sm:gap-4 min-w-0">
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden bg-muted flex-shrink-0">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden bg-muted shrink-0">
                   <img
                     src={getOptimizedImageUrl(product.image, 192)}
                     alt={product.name}
@@ -199,7 +199,7 @@ export default function ShopProducts() {
                           <Badge
                             variant="warning"
                             size="sm"
-                            className="!px-1.5 !py-0"
+                            className="px-1.5! py-0!"
                           >
                             <Star size={9} className="fill-current" />
                             Featured
@@ -210,7 +210,7 @@ export default function ShopProducts() {
                         {product.name}
                       </p>
                     </div>
-                    <div className="flex items-center gap-1 flex-shrink-0">
+                    <div className="flex items-center gap-1 shrink-0">
                       <Badge
                         variant={config.variant}
                         size="sm"
@@ -275,7 +275,7 @@ export default function ShopProducts() {
                       {formatPrice(product.discountPrice ?? product.price)}
                     </p>
                     {product.discountPrice && (
-                      <p className="text-[10px] text-muted-foreground line-through leading-none">
+                      <p className="text-2xs text-muted-foreground line-through leading-none">
                         {formatPrice(product.price)}
                       </p>
                     )}
@@ -291,7 +291,7 @@ export default function ShopProducts() {
 
               <div className="flex items-center justify-between gap-3 mt-3 pt-3 border-t border-border/70 min-w-0">
                 <div>
-                  <p className="text-[10px] text-muted-foreground uppercase tracking-wide">
+                  <p className="text-2xs text-muted-foreground uppercase tracking-wide">
                     Stock
                   </p>
                   <p
@@ -311,7 +311,7 @@ export default function ShopProducts() {
                   </p>
                 </div>
                 <div
-                  className="flex items-center rounded-full overflow-hidden bg-card flex-shrink-0"
+                  className="flex items-center rounded-full overflow-hidden bg-card shrink-0"
                   style={{
                     boxShadow:
                       "4px 4px 10px var(--nm-dark), -3px -3px 8px var(--nm-light)",

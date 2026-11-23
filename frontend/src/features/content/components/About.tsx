@@ -30,7 +30,7 @@ export default function About() {
       <div className="md:hidden flex items-center gap-2 px-4 py-3 border-b border-border">
         <button
           onClick={() => navigate(-1)}
-          className="w-9 h-9 flex items-center justify-center rounded-xl text-muted-foreground active:scale-95 transition-transform flex-shrink-0"
+          className="w-9 h-9 flex items-center justify-center rounded-xl text-muted-foreground active:scale-95 transition-transform shrink-0"
           style={{
             boxShadow:
               "4px 4px 10px var(--nm-dark), -3px -3px 8px var(--nm-light)",
@@ -217,7 +217,7 @@ export default function About() {
             const Icon = item.icon
             return (
               <div key={item.title} className="flex gap-4">
-                <div className="w-11 h-11 bg-primary-light rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-11 h-11 bg-primary-light rounded-xl flex items-center justify-center shrink-0">
                   <Icon size={20} className="text-primary" />
                 </div>
                 <div>

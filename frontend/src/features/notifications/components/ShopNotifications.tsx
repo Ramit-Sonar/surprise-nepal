@@ -85,7 +85,7 @@ export default function ShopNotifications() {
               key={notification.id}
               className="flex items-start gap-3 p-4 border-b border-border last:border-0"
             >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                 <Icon size={17} className="text-primary" />
               </div>
               <div className="min-w-0">

@@ -57,7 +57,7 @@ export default function Modal({
         className={`dialog-surface bg-card border border-border/70 sm:rounded-2xl rounded-t-2xl w-full ${sizes[size]} animate-scaleIn overflow-hidden flex flex-col max-h-[92dvh] sm:max-h-[90vh] ${className}`}
       >
         {title && (
-          <div className="flex items-center justify-between px-6 py-4 border-b border-border flex-shrink-0">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-border shrink-0">
             <h2 className="font-semibold text-foreground text-lg">{title}</h2>
             <button
               onClick={onClose}

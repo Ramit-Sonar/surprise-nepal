@@ -277,7 +277,7 @@ export default function Profile() {
               className="bg-card rounded-2xl border border-border p-4 flex items-start justify-between gap-3"
             >
               <div className="flex items-start gap-3 min-w-0">
-                <div className="w-9 h-9 bg-primary-light rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-9 h-9 bg-primary-light rounded-xl flex items-center justify-center shrink-0 mt-0.5">
                   <MapPin size={16} className="text-primary" />
                 </div>
                 <div className="min-w-0">
@@ -294,7 +294,7 @@ export default function Profile() {
                   )}
                 </div>
               </div>
-              <div className="flex gap-1 flex-shrink-0">
+              <div className="flex gap-1 shrink-0">
                 <button
                   onClick={() => openEditAddress(i)}
                   className="p-2 rounded-xl hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
@@ -351,7 +351,7 @@ export default function Profile() {
                     alt={gift.name}
                     width={64}
                     height={64}
-                    className="w-16 h-16 rounded-xl object-cover flex-shrink-0"
+                    className="w-16 h-16 rounded-xl object-cover shrink-0"
                     loading="lazy"
                     decoding="async"
                   />
@@ -494,7 +494,7 @@ export default function Profile() {
                         "5px 5px 12px var(--nm-dark), -3px -3px 8px var(--nm-light)",
                     }}
                   >
-                    <div className="w-10 h-10 rounded-xl bg-primary-light flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-primary-light flex items-center justify-center shrink-0">
                       <Icon size={18} className="text-primary" />
                     </div>
                     <span className="flex-1 font-medium text-sm text-foreground">
@@ -507,7 +507,7 @@ export default function Profile() {
                     )}
                     <ChevronRight
                       size={16}
-                      className="text-muted-foreground flex-shrink-0"
+                      className="text-muted-foreground shrink-0"
                     />
                   </button>
                 )
@@ -522,7 +522,7 @@ export default function Profile() {
                     "5px 5px 12px var(--nm-dark), -3px -3px 8px var(--nm-light)",
                 }}
               >
-                <div className="w-10 h-10 rounded-xl bg-primary-light flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-primary-light flex items-center justify-center shrink-0">
                   <ShoppingBag size={18} className="text-primary" />
                 </div>
                 <span className="flex-1 font-medium text-sm text-foreground">
@@ -535,7 +535,7 @@ export default function Profile() {
                 )}
                 <ChevronRight
                   size={16}
-                  className="text-muted-foreground flex-shrink-0"
+                  className="text-muted-foreground shrink-0"
                 />
               </button>
 
@@ -548,7 +548,7 @@ export default function Profile() {
                     "5px 5px 12px var(--nm-dark), -3px -3px 8px var(--nm-light)",
                 }}
               >
-                <div className="w-10 h-10 rounded-xl bg-error/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-error/10 flex items-center justify-center shrink-0">
                   <LogOut size={18} className="text-error" />
                 </div>
                 <span className="flex-1 font-medium text-sm text-error">
@@ -566,7 +566,7 @@ export default function Profile() {
       <div className="hidden lg:block max-w-4xl mx-auto px-6 py-10">
         {/* Profile header */}
         <div className="bg-card rounded-2xl border border-border p-6 mb-6 flex items-start gap-5">
-          <div className="relative flex-shrink-0">
+          <div className="relative shrink-0">
             <div className="w-20 h-20 rounded-2xl overflow-hidden bg-primary/10 border border-border">
               {state.user.avatar ? (
                 <img
@@ -652,7 +652,7 @@ export default function Profile() {
                     <Icon size={16} />
                     <span className="flex-1 text-left">{tab.label}</span>
                     {tab.id === "wishlist" && state.wishlist.length > 0 && (
-                      <span className="text-[10px] font-bold bg-primary/10 text-primary px-1.5 py-0.5 rounded-full">
+                      <span className="text-2xs font-bold bg-primary/10 text-primary px-1.5 py-0.5 rounded-full">
                         {state.wishlist.length}
                       </span>
                     )}
@@ -666,7 +666,7 @@ export default function Profile() {
                 <ShoppingBag size={16} />
                 <span className="flex-1 text-left">My Orders</span>
                 {state.orders.length > 0 && (
-                  <span className="text-[10px] font-bold bg-primary/10 text-primary px-1.5 py-0.5 rounded-full">
+                  <span className="text-2xs font-bold bg-primary/10 text-primary px-1.5 py-0.5 rounded-full">
                     {state.orders.length}
                   </span>
                 )}

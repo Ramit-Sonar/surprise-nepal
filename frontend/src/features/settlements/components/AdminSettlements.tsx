@@ -215,7 +215,7 @@ export default function AdminSettlements() {
       </div>
       <div className="bg-card rounded-2xl border border-border overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[980px]">
+          <table className="w-full min-w-245">
             <thead className="bg-muted/40">
               <tr>
                 {[

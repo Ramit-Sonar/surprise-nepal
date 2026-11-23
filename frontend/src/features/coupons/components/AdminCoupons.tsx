@@ -68,7 +68,7 @@ function StatusBadge({ coupon }: { coupon: Coupon }) {
 function PublicationBadge({ coupon }: { coupon: Coupon }) {
   return (
     <span
-      className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium ${
+      className={`inline-flex items-center px-2 py-0.5 rounded-full text-2xs font-medium ${
         coupon.publishedOnSite
           ? "text-primary bg-primary-light"
           : "text-muted-foreground bg-muted"
@@ -318,7 +318,7 @@ function CouponRow({
             </span>
             <button
               onClick={onCopy}
-              className="p-1 rounded-md hover:bg-muted transition-colors flex-shrink-0"
+              className="p-1 rounded-md hover:bg-muted transition-colors shrink-0"
               title="Copy code"
             >
               <Copy size={12} className="text-muted-foreground" />
@@ -335,7 +335,7 @@ function CouponRow({
             {formatDiscount(coupon)}
           </span>
           {coupon.minOrderAmount > 0 && (
-            <p className="text-[10px] text-muted-foreground">
+            <p className="text-2xs text-muted-foreground">
               min रु {coupon.minOrderAmount.toLocaleString()}
             </p>
           )}

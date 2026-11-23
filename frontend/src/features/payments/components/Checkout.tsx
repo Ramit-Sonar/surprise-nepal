@@ -46,7 +46,7 @@ const MapSelector = lazy(() => import("../../delivery/components/MapSelector"))
 
 function MapSelectorFallback() {
   return (
-    <div className="h-[360px] rounded-2xl border border-border bg-muted flex items-center justify-center">
+    <div className="h-90 rounded-2xl border border-border bg-muted flex items-center justify-center">
       <div className="w-7 h-7 rounded-full border-4 border-primary border-t-transparent animate-spin" />
     </div>
   )
@@ -272,9 +272,9 @@ export default function Checkout() {
 
         {/* Step indicator */}
         <div className="flex items-center justify-between mb-6 sm:mb-10 relative">
-          <div className="absolute top-4 left-0 right-0 h-0.5 bg-border -z-0" />
+          <div className="absolute top-4 left-0 right-0 h-0.5 bg-border z-0" />
           <div
-            className="absolute top-4 left-0 h-0.5 bg-primary transition-all duration-500 -z-0"
+            className="absolute top-4 left-0 h-0.5 bg-primary transition-all duration-500 z-0"
             style={{ width: `${((step - 1) / (STEPS.length - 1)) * 100}%` }}
           />
           {STEPS.map((s) => {
@@ -307,7 +307,7 @@ export default function Checkout() {
                   )}
                 </div>
                 <span
-                  className={`text-[10px] font-medium hidden sm:block ${
+                  className={`text-2xs font-medium hidden sm:block ${
                     current
                       ? "text-primary"
                       : done
@@ -345,14 +345,14 @@ export default function Checkout() {
                   alt=""
                   width={32}
                   height={32}
-                  className="w-8 h-8 rounded-lg object-cover flex-shrink-0"
+                  className="w-8 h-8 rounded-lg object-cover shrink-0"
                   loading="lazy"
                   decoding="async"
                 />
                 <p className="text-xs text-muted-foreground truncate flex-1">
                   {item.gift.name} × {item.quantity}
                 </p>
-                <p className="text-xs font-medium text-foreground flex-shrink-0">
+                <p className="text-xs font-medium text-foreground shrink-0">
                   {formatPrice(
                     (item.gift.discountPrice ?? item.gift.price) *
                       item.quantity,
@@ -398,7 +398,7 @@ export default function Checkout() {
                   <div className="bg-success/8 border border-success/20 rounded-xl p-4 flex items-start gap-3">
                     <Home
                       size={16}
-                      className="text-success mt-0.5 flex-shrink-0"
+                      className="text-success mt-0.5 shrink-0"
                     />
                     <p className="text-sm text-foreground">
                       This gift is <strong>for you</strong>. We'll deliver it to
@@ -518,7 +518,7 @@ export default function Checkout() {
                   <div className="bg-primary-light border border-primary/20 rounded-xl p-4 flex items-start gap-3">
                     <Sparkles
                       size={16}
-                      className="text-primary mt-0.5 flex-shrink-0"
+                      className="text-primary mt-0.5 shrink-0"
                     />
                     <div>
                       <p className="text-sm font-semibold text-primary mb-0.5">
@@ -785,7 +785,7 @@ export default function Checkout() {
                       Qty: {item.quantity}
                     </p>
                   </div>
-                  <p className="text-sm font-semibold text-foreground flex-shrink-0">
+                  <p className="text-sm font-semibold text-foreground shrink-0">
                     {formatPrice(
                       (item.gift.discountPrice ?? item.gift.price) *
                         item.quantity,
@@ -1182,7 +1182,7 @@ function PaymentStep({
       {!isQR && (
         <div className="space-y-4">
           <div className="flex items-start gap-4 p-5 bg-muted rounded-2xl border border-border">
-            <Truck size={28} className="text-muted-foreground flex-shrink-0" />
+            <Truck size={28} className="text-muted-foreground shrink-0" />
             <div>
               <p className="font-semibold text-foreground">Cash on Delivery</p>
               <p className="text-sm text-muted-foreground mt-1">
@@ -1197,7 +1197,7 @@ function PaymentStep({
           <div className="flex items-start gap-3 p-4 bg-amber-50 border border-amber-200 rounded-2xl">
             <AlertCircle
               size={16}
-              className="text-amber-500 flex-shrink-0 mt-0.5"
+              className="text-amber-500 shrink-0 mt-0.5"
             />
             <p className="text-sm text-amber-800">
               Your order will be confirmed by our team before dispatch. You'll
@@ -1216,8 +1216,8 @@ function PaymentStep({
               Scan this QR to pay
             </p>
             <div className="flex justify-center">
-              <div className="bg-white rounded-3xl p-5 shadow-xl shadow-foreground/10 border border-border max-w-[260px] w-full">
-                <p className="text-center text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-3">
+              <div className="bg-white rounded-3xl p-5 shadow-xl shadow-foreground/10 border border-border max-w-65 w-full">
+                <p className="text-center text-2xs font-bold text-muted-foreground uppercase tracking-widest mb-3">
                   GiftSurprise · Payment QR
                 </p>
                 <div className="aspect-square rounded-2xl overflow-hidden">
@@ -1255,7 +1255,7 @@ function PaymentStep({
           <div className="flex items-start gap-3 p-4 bg-amber-50 border border-amber-200 rounded-2xl">
             <AlertCircle
               size={18}
-              className="text-amber-500 flex-shrink-0 mt-0.5"
+              className="text-amber-500 shrink-0 mt-0.5"
             />
             <div>
               <p className="text-sm font-semibold text-amber-800">
@@ -1326,7 +1326,7 @@ function PaymentStep({
 
           {paymentScreenshots.length > 0 && (
             <div className="flex items-center gap-2 p-3 bg-success/10 rounded-xl border border-success/20">
-              <CheckCircle2 size={16} className="text-success flex-shrink-0" />
+              <CheckCircle2 size={16} className="text-success shrink-0" />
               <p className="text-sm text-success font-medium">
                 {paymentScreenshots.length === 1
                   ? "Screenshot uploaded — you're ready to place your order!"

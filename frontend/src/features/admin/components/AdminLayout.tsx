@@ -359,7 +359,7 @@ export default function AdminLayout({
     <div className="flex h-screen bg-background overflow-hidden">
       {/* Sidebar — desktop */}
       <aside
-        className="hidden lg:flex flex-col flex-shrink-0"
+        className="hidden lg:flex flex-col shrink-0"
         style={{ width: 272, background: SB.bg }}
       >
         <SidebarContent />
@@ -385,7 +385,7 @@ export default function AdminLayout({
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Top bar */}
         <header
-          className="h-16 bg-card border-b border-border/30 flex items-center px-4 sm:px-6 gap-4 flex-shrink-0"
+          className="h-16 bg-card border-b border-border/30 flex items-center px-4 sm:px-6 gap-4 shrink-0"
           style={{
             boxShadow: "0 4px 12px var(--nm-dark), 0 -1px 5px var(--nm-light)",
           }}

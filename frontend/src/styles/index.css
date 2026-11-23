@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-@import 'tailwindcss';
+@import 'tailwindcss' source('../');
 
 @theme {
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-display: 'DM Serif Display', Georgia, serif;
+  --text-2xs: 10px;
 
   --color-primary: #C2003C;
   --color-primary-dark: #96002D;
@@ -90,7 +91,7 @@ img {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-border);
+  background: var(--nm-dark);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -512,9 +513,6 @@ div.bg-black\/60 {
 
 /* ── Scrollbar ──────────────────────────────────────────────────────── */
 
-::-webkit-scrollbar-thumb {
-  background: var(--nm-dark);
-}
 ::-webkit-scrollbar-track {
   background: var(--color-background);
 }
@@ -522,7 +520,5 @@ div.bg-black\/60 {
 /* ── Focus ring ─────────────────────────────────────────────────────── */
 
 :focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
   box-shadow: none !important;
 }

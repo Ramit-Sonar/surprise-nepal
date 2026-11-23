@@ -189,7 +189,7 @@ export default function OrderTracking() {
               <div className="flex items-start gap-2 text-sm">
                 <MapPin
                   size={14}
-                  className="text-muted-foreground mt-0.5 flex-shrink-0"
+                  className="text-muted-foreground mt-0.5 shrink-0"
                 />
                 <div>
                   <p className="text-foreground">{order.location.address}</p>
@@ -237,7 +237,7 @@ export default function OrderTracking() {
               <div className="flex items-start gap-3 flex-1">
                 <AlertCircle
                   size={18}
-                  className="text-error mt-0.5 flex-shrink-0"
+                  className="text-error mt-0.5 shrink-0"
                 />
                 <div>
                   <p className="font-semibold text-foreground text-sm">

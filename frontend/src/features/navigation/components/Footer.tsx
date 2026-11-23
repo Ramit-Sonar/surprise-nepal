@@ -163,7 +163,7 @@ export default function Footer() {
                   href="tel:+977980000000"
                   className="flex items-start gap-2.5 text-sm opacity-70 hover:opacity-100 transition-opacity"
                 >
-                  <Phone size={15} className="mt-0.5 flex-shrink-0" />
+                  <Phone size={15} className="mt-0.5 shrink-0" />
                   <span>+977 980-000-0000</span>
                 </a>
               </li>
@@ -172,13 +172,13 @@ export default function Footer() {
                   href="mailto:hello@giftsurprise.com.np"
                   className="flex items-start gap-2.5 text-sm opacity-70 hover:opacity-100 transition-opacity"
                 >
-                  <Mail size={15} className="mt-0.5 flex-shrink-0" />
+                  <Mail size={15} className="mt-0.5 shrink-0" />
                   <span>hello@giftsurprise.com.np</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-2.5 text-sm opacity-70">
-                  <MapPin size={15} className="mt-0.5 flex-shrink-0" />
+                  <MapPin size={15} className="mt-0.5 shrink-0" />
                   <span>
                     Thamel, Kathmandu
                     <br />

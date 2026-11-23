@@ -90,7 +90,7 @@ export default function Cart() {
                   className="bg-card rounded-2xl border border-border p-4 sm:p-5 flex gap-4 sm:gap-5 animate-fadeIn"
                 >
                   {/* Image */}
-                  <Link to={`/gifts/${item.gift.id}`} className="flex-shrink-0">
+                  <Link to={`/gifts/${item.gift.id}`} className="shrink-0">
                     <img
                       src={getOptimizedImageUrl(item.gift.image, 192)}
                       alt={item.gift.name}
@@ -120,7 +120,7 @@ export default function Cart() {
                           removeFromCart(item.gift.id)
                           showToast("Item removed from cart", "info")
                         }}
-                        className="p-2 rounded-xl text-muted-foreground hover:text-error transition-all active:scale-95 flex-shrink-0"
+                        className="p-2 rounded-xl text-muted-foreground hover:text-error transition-all active:scale-95 shrink-0"
                         style={{
                           boxShadow:
                             "4px 4px 8px var(--nm-dark), -3px -3px 6px var(--nm-light)",

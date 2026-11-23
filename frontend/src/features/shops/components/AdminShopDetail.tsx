@@ -482,7 +482,7 @@ export default function AdminShopDetail() {
             <p className="font-semibold">Products</p>
           </div>
           <div className="flex items-center gap-3 rounded-xl bg-warning/10 border border-warning/20 px-3 py-2">
-            <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-warning/15 text-warning">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-warning/15 text-warning">
               <Sparkles size={16} />
             </span>
             <div>
@@ -627,7 +627,7 @@ export default function AdminShopDetail() {
         </div>
         {recentOrderRows.length > 0 ? (
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[650px]">
+            <table className="w-full min-w-162.5">
               <thead className="bg-muted/40">
                 <tr>
                   {["Order", "Product(s)", "Amount", "Status"].map((label) => (
@@ -683,7 +683,7 @@ export default function AdminShopDetail() {
         </div>
         {monthlyRows.length > 0 ? (
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[650px]">
+            <table className="w-full min-w-162.5">
               <thead className="bg-muted/40">
                 <tr>
                   {[

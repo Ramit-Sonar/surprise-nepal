@@ -191,7 +191,7 @@ export default function DateTimePicker({
               >
                 <Icon size={18} />
                 <span className="text-xs font-semibold">{slot.label}</span>
-                <span className="text-[9px] sm:text-[10px] leading-tight text-center opacity-75">
+                <span className="text-[9px] sm:text-2xs leading-tight text-center opacity-75">
                   {slot.time}
                 </span>
               </button>

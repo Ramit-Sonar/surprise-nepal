@@ -12,10 +12,10 @@ function ToastItem({ toast }: { toast: ToastType }) {
   }, [])
 
   const icons = {
-    success: <CheckCircle size={18} className="text-success flex-shrink-0" />,
-    error: <XCircle size={18} className="text-error flex-shrink-0" />,
-    warning: <AlertCircle size={18} className="text-warning flex-shrink-0" />,
-    info: <Info size={18} className="text-primary flex-shrink-0" />,
+    success: <CheckCircle size={18} className="text-success shrink-0" />,
+    error: <XCircle size={18} className="text-error shrink-0" />,
+    warning: <AlertCircle size={18} className="text-warning shrink-0" />,
+    info: <Info size={18} className="text-primary shrink-0" />,
   }
 
   const bg = {

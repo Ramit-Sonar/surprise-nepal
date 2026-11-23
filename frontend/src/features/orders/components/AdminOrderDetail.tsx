@@ -363,7 +363,7 @@ export default function AdminOrderDetail() {
       {/* Surprise gift alert */}
       {order.mode === "surprise" ? (
         <div className="mb-5 flex items-start gap-3 bg-purple-50 border border-purple-200 rounded-2xl px-5 py-4">
-          <div className="w-9 h-9 rounded-xl bg-purple-100 flex items-center justify-center flex-shrink-0">
+          <div className="w-9 h-9 rounded-xl bg-purple-100 flex items-center justify-center shrink-0">
             <Gift size={18} className="text-purple-600" />
           </div>
           <div className="min-w-0">
@@ -378,13 +378,13 @@ export default function AdminOrderDetail() {
               Coordinate delivery discreetly.
             </p>
           </div>
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <AlertTriangle size={16} className="text-purple-400" />
           </div>
         </div>
       ) : (
         <div className="mb-5 flex items-center gap-3 bg-muted/60 border border-border rounded-2xl px-5 py-3">
-          <User size={16} className="text-muted-foreground flex-shrink-0" />
+          <User size={16} className="text-muted-foreground shrink-0" />
           <p className="text-sm text-muted-foreground">
             <span className="font-semibold text-foreground">Self Order</span> —
             Customer ordered this gift for themselves. Normal delivery applies.
@@ -553,7 +553,7 @@ export default function AdminOrderDetail() {
             </h2>
             {order.mode === "surprise" && order.recipient.senderName && (
               <div className="mb-3 pb-3 border-b border-border">
-                <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide mb-1">
+                <p className="text-2xs font-semibold text-muted-foreground uppercase tracking-wide mb-1">
                   Sender (Customer)
                 </p>
                 <p className="font-semibold text-foreground">
@@ -571,7 +571,7 @@ export default function AdminOrderDetail() {
             )}
             <div>
               {order.mode === "surprise" && (
-                <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide mb-1">
+                <p className="text-2xs font-semibold text-muted-foreground uppercase tracking-wide mb-1">
                   Recipient (Do not contact)
                 </p>
               )}
@@ -582,7 +582,7 @@ export default function AdminOrderDetail() {
                 {order.recipient.phone}
               </p>
               {order.mode === "surprise" && (
-                <p className="text-[10px] text-purple-600 font-medium mt-1 flex items-center gap-1">
+                <p className="text-2xs text-purple-600 font-medium mt-1 flex items-center gap-1">
                   <Gift size={9} /> Surprise — keep delivery confidential
                 </p>
               )}
@@ -743,7 +743,7 @@ export default function AdminOrderDetail() {
               </div>
             ) : order.paymentMethod !== "Cash on Delivery" ? (
               <div className="flex items-center gap-2 p-3 bg-muted rounded-xl text-xs text-muted-foreground">
-                <Clock size={14} className="flex-shrink-0" />
+                <Clock size={14} className="shrink-0" />
                 Waiting for customer to upload payment screenshot.
               </div>
             ) : null}

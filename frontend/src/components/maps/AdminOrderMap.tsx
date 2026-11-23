@@ -39,12 +39,12 @@ export default function AdminOrderMap({
 
         <div className="absolute bottom-2 left-2 right-12 pointer-events-none">
           <div className="bg-white/95 backdrop-blur-sm rounded-xl px-3 py-2 shadow-md border border-gray-200 flex items-start gap-2">
-            <MapPin size={13} className="text-primary flex-shrink-0 mt-0.5" />
+            <MapPin size={13} className="text-primary shrink-0 mt-0.5" />
             <div className="min-w-0">
               <p className="text-xs font-semibold text-gray-900 truncate">
                 {location.address}
               </p>
-              <p className="text-[10px] text-gray-500">
+              <p className="text-2xs text-gray-500">
                 {location.city}
                 {location.landmark ? ` · ${location.landmark}` : ""}
               </p>
