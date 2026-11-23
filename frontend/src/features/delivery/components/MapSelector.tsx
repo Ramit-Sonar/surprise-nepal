@@ -17,7 +17,10 @@ import {
 import { Input } from "../../../components/ui/Input"
 import Button from "../../../components/ui/Button"
 import type { DeliveryLocation } from "../types"
-import { HAS_GOOGLE_MAPS_API_KEY } from "../../../config/api"
+import {
+  GOOGLE_MAP_ID,
+  HAS_GOOGLE_MAPS_API_KEY,
+} from "../../../config/api"
 import GoogleMapsProvider from "../../../components/maps/GoogleMapsProvider"
 import {
   geolocateViaIp,
@@ -648,7 +651,7 @@ function MapSelectorContent({ city, value, onChange }: MapSelectorProps) {
       >
         <Map
           id="selector-map"
-          mapId="giftsurprise-selector"
+          mapId={GOOGLE_MAP_ID}
           defaultCenter={pinPos ?? cityCenter}
           defaultZoom={14}
           gestureHandling="greedy"

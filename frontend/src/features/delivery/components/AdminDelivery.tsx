@@ -12,6 +12,7 @@ import {
   getOrderStatusLabel,
   ORDER_STATUS_COLOR,
 } from "../../../config/orderStatus"
+import { GOOGLE_MAP_ID } from "../../../config/api"
 import { getDeliverySettings } from "../services/deliveryService"
 import GoogleMapsProvider from "../../../components/maps/GoogleMapsProvider"
 
@@ -323,7 +324,7 @@ export default function AdminDelivery() {
             <GoogleMapsProvider>
               <Map
                 id="delivery-map"
-                mapId="giftsurprise-delivery"
+                mapId={GOOGLE_MAP_ID}
                 defaultCenter={cityCenter}
                 defaultZoom={13}
                 gestureHandling="greedy"

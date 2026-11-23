@@ -1,6 +1,6 @@
 import { AdvancedMarker, Map } from "@vis.gl/react-google-maps"
 import { MapPin } from "lucide-react"
-import { GOOGLE_MAPS_LINK_BASE } from "../../config/api"
+import { GOOGLE_MAPS_LINK_BASE, GOOGLE_MAP_ID } from "../../config/api"
 import type { DeliveryLocation } from "../../types/index"
 import GoogleMapsProvider from "./GoogleMapsProvider"
 
@@ -17,7 +17,7 @@ export default function AdminOrderMap({
         <Map
           defaultCenter={location.coordinates}
           defaultZoom={15}
-          mapId="giftsurprise-admin-map"
+          mapId={GOOGLE_MAP_ID}
           gestureHandling="cooperative"
           disableDefaultUI={false}
           zoomControl
